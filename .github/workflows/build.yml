@@ -10,13 +10,13 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v3
+      - uses: actions/checkout@v3
 
-    - name: Installare Gradle senza cache
-  uses: gradle/gradle-build-action@v2
-  with:
-    gradle-version: '8.2'
-    cache-enabled: false
+      - name: Installare Gradle senza cache
+        uses: gradle/gradle-build-action@v2
+        with:
+          gradle-version: '8.2'
+          cache-enabled: false
 
-    - name: Esegui build con Gradle
-      run: gradle build
+      - name: Esegui build con Gradle
+        run: gradle build
